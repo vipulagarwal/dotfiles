@@ -1,0 +1,43 @@
+#!/bin/bash
+# createlinks
+# creates symlinks to a dotvim repo
+
+# Alexander Swen
+# Private contact: alex@swen.nu, 06-21811135
+
+# CHANGELOG:
+# 2013-06-25	A.Swen	created.
+
+# SETTINGS
+date=$(date +%Y%m%d)
+me=$(basename $0)
+mydir=$(dirname $0)
+dotfiles="vimrc gvimrc vim_abbreviations"
+
+# FUNCTIONS
+die () {
+  rc=$1
+  shift
+  echo "==========================">&2
+  echo "====    FATAL  ERROR  ====" >&2
+  echo "==========================">&2
+  echo "" >&2
+  echo $@ >&2
+  exit $rc
+}
+
+# SCRIPT
+[ -d ~/dotvim ]|| die 1 "have you cloned dotvim to your homedir?"
+
+
+cd ~/dotvim
+
+for dotfile in ${dotfiles};do
+  [ -f ~/.${dotfile} ] && mv ~/.${dotfile} ~/.${dotfile}-bck-dotfiles-${date}
+  ln -s ~/dotvim/${dotfile} ~/.${dotfile}
+done
+[ -d ~/.vim ] && mv ~/.vim ~/.vim-bck-dotfiles-${date}
+ln -s dotvim ~/.vim
+
+
+# END
