@@ -113,7 +113,7 @@ filetype plugin on
 set laststatus=2
 
 " history and undo
-set history=100000
+"set history=100000
 "if has('persistent_undo')
 "  set undofile
 "  set undoreload=10000
