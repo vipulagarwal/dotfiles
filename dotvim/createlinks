@@ -12,7 +12,7 @@
 date=$(date +%Y%m%d)
 me=$(basename $0)
 mydir=$(dirname $0)
-dotfiles="vimrc gvimrc vim_abbreviations"
+dotfiles="vimrc vim_abbreviations"
 
 # FUNCTIONS
 die () {
