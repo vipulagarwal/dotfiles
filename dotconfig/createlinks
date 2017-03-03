@@ -1,0 +1,9 @@
+date=$(date +%Y%m%d)
+dotconfig_members="terminator"
+
+[ -d ~/.config ] || mkdir ~/.config
+
+for dotconfig_member in ${dotconfig_members} ; do
+  [ -d ~/.config/${dotconfig_member} ] && mv ~/.config/${dotconfig_member} ~/.config/${dotconfig_member}_bak_${date}
+  ln -s ~/dotfiles/dotconfig/${dotconfig_member} ~/.config/
+done

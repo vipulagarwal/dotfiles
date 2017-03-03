@@ -1,0 +1,27 @@
+[global_config]
+[keybindings]
+  next_tab = <Super>k
+  go_up = <Alt>k
+  resize_up = <Alt><Super>k
+  resize_left = <Alt><Super>h
+  prev_tab = <Super>j
+  go_down = <Alt>j
+  go_right = <Alt>l
+  go_left = <Alt>h
+  resize_right = <Alt><Super>l
+  resize_down = <Alt><Super>j
+[profiles]
+  [[default]]
+    use_system_font = False
+    font = Monospace 12
+    scrollback_infinite = True
+    foreground_color = "#ffffff"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
