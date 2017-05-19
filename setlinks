@@ -7,4 +7,4 @@ ln -s dotfiles/dotvim
 ~/dotvim/createlinks
 
 # dotconfig links setup
-~/dotconfig/createlinks
+~/dotfiles/dotconfig/createlinks
