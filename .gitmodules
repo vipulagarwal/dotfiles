@@ -19,3 +19,6 @@
 [submodule "dotvim/bundle/vim-airline-themes"]
 	path = dotvim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "dotvim/bundle/nerdcommenter"]
+	path = dotvim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
