@@ -22,3 +22,6 @@
 [submodule "dotvim/bundle/nerdcommenter"]
 	path = dotvim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "dotvim/bundle/ansible-vim"]
+	path = dotvim/bundle/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim
