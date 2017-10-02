@@ -1,9 +1,3 @@
-[submodule "dotvim/bundle/syntastic"]
-	path = dotvim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "dotvim/bundle/vim-go"]
-	path = dotvim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
 [submodule "dotvim/bundle/vim-airline"]
 	path = dotvim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
@@ -13,9 +7,6 @@
 [submodule "dotvim/bundle/vim-fugitive"]
 	path = dotvim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule "dotvim/bundle/vim-linux-coding-style"]
-	path = dotvim/bundle/vim-linux-coding-style
-	url = https://github.com/vivien/vim-linux-coding-style.git
 [submodule "dotvim/bundle/vim-airline-themes"]
 	path = dotvim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
@@ -25,3 +16,12 @@
 [submodule "dotvim/bundle/ansible-vim"]
 	path = dotvim/bundle/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim
+[submodule "dotvim/bundle/ale"]
+	path = dotvim/bundle/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "dotvim/bundle/nerdtree"]
+	path = dotvim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "dotvim/bundle/tabular"]
+	path = dotvim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git

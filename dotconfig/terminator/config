@@ -1,27 +1,40 @@
 [global_config]
+  borderless = True
+  extra_styling = False
+  homogeneous_tabbar = False
+  inactive_color_offset = 1.0
+  scroll_tabbar = True
 [keybindings]
-  next_tab = <Super>k
-  go_up = <Alt>k
-  resize_up = <Alt><Super>k
-  resize_left = <Alt><Super>h
-  prev_tab = <Super>j
+  broadcast_all = None
+  broadcast_group = None
+  broadcast_off = None
   go_down = <Alt>j
-  go_right = <Alt>l
   go_left = <Alt>h
-  resize_right = <Alt><Super>l
+  go_right = <Alt>l
+  go_up = <Alt>k
+  layout_launcher = None
+  next_tab = <Primary><Shift>k
+  prev_tab = <Primary><Shift>j
   resize_down = <Alt><Super>j
-[profiles]
-  [[default]]
-    use_system_font = False
-    font = Monospace 12
-    scrollback_infinite = True
-    foreground_color = "#ffffff"
+  resize_left = <Alt><Super>h
+  resize_right = <Alt><Super>l
+  resize_up = <Alt><Super>k
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      profile = default
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#ffffff"
+    font = Monospace 11
+    foreground_color = "#ffffff"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False

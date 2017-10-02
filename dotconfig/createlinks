@@ -1,6 +1,6 @@
 #!/bin/bash
 date=$(date +%Y%m%d)
-dotconfig_members="terminator"
+dotconfig_members="terminator gtk-3.0"
 
 [ -d ~/.config ] || mkdir ~/.config
 

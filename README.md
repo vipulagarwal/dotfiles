@@ -15,3 +15,6 @@ Manually initialize and fetch submodules
 $ git submodule init
 $ git submodule update --remote # pull changes from upstream
 ```
+
+### Vim modules via packages
+* YouCompleteMe - vim-youcompleteme_0+20161219+git194ff33-1_all.deb
