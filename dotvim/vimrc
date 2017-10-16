@@ -281,3 +281,6 @@ endfunction
 " Usage: select what you want to be replaced by encrypted stuff and then press
 " F3
 map <F3> :call EyamlEncrypt() <CR>
+
+" wrap git commit message body to 72 characters
+au FileType gitcommit set tw=72
