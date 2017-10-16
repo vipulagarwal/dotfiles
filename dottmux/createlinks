@@ -1,0 +1,33 @@
+#!/bin/bash
+
+date=$(date +%Y%m%d)
+me=$(basename $0)
+mydir=$(dirname $0)
+dotfiles="tmux.conf"
+
+# FUNCTIONS
+die () {
+  rc=$1
+  shift
+  echo "==========================">&2
+  echo "====    FATAL  ERROR  ====" >&2
+  echo "==========================">&2
+  echo "" >&2
+  echo $@ >&2
+  exit $rc
+}
+
+# SCRIPT
+[ -d ~/dottmux ]|| die 1 "have you cloned dottmux to your homedir?"
+
+cd ~/dottmux
+
+for dotfile in ${dotfiles};do
+  [ -f ~/.${dotfile} ] && mv ~/.${dotfile} ~/.${dotfile}-bck-dotfiles-${date}
+  ln -s ~/dottmux/${dotfile} ~/.${dotfile}
+done
+
+[ -d ~/.tmux ] && mv ~/.tmux ~/.tmux-bck-dotfiles-${date}
+
+ln -s dottmux ~/.tmux
+# END

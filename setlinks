@@ -2,9 +2,13 @@
 cd ~/
 ln -s dotfiles/.tmux.conf
 ln -s dotfiles/dotvim
+ln -s dotfiles/dottmux
 
 # dotvim links setup
 ~/dotvim/createlinks
 
 # dotconfig links setup
 ~/dotfiles/dotconfig/createlinks
+
+# dottmux links setup
+~/dotfiles/dottmux/createlinks

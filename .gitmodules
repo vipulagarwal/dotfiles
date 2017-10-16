@@ -25,3 +25,9 @@
 [submodule "dotvim/bundle/tabular"]
 	path = dotvim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "dottmux/plugins/tmux-sensible"]
+	path = dottmux/plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible
+[submodule "dottmux/plugins/tpm"]
+	path = dottmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
