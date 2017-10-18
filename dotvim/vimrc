@@ -182,7 +182,7 @@ inoremap <C-Up>    <ESC><C-w>k
 inoremap <C-Right> <ESC><C-w>l
 
 " tabs
-nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w>t :tabnew<CR>
 nmap <S-Right> gt
 nmap <S-Left> gT
 
