@@ -284,3 +284,9 @@ map <F3> :call EyamlEncrypt() <CR>
 
 " wrap git commit message body to 72 characters
 au FileType gitcommit set tw=72
+
+" F9 for python quick run
+autocmd FileType python nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
+
+" quick fix for YCM - set filetype for .py files (needs investigation)
+autocmd BufNewFile,BufRead *.py   set filetype=python
