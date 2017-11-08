@@ -40,7 +40,7 @@ set wildignore+=vendor/cache/**
 set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
-set wildignore+=*.pg,*.jpg,*.gif
+set wildignore+=*.png,*.jpg,*.gif
 
 " Scrolling
 set scrolloff=10      " Start scrolling when cursor is 10 lines away from margins.
