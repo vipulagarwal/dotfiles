@@ -1,2 +1,3 @@
 *.swp
 dotvim/bundle/YouCompleteMe
+dotvim/bundle/vim-nerdtree-tabs

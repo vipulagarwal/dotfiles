@@ -40,7 +40,7 @@ set wildignore+=vendor/cache/**
 set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.pg,*.jpg,*.gif
 
 " Scrolling
 set scrolloff=10      " Start scrolling when cursor is 10 lines away from margins.
@@ -75,7 +75,7 @@ nmap <C-s> :w<CR>
 nnoremap <leader>t :Tabularize /=><CR>
 
 " Nerdtree
-nnoremap <leader>d :NERDTreeToggle<cr>
+nnoremap <leader>d :NERDTreeTabsToggle<cr>
 
 " re-indent entire file and return to where you was
 nmap <C-i> msgg=G`s
@@ -155,12 +155,14 @@ nnoremap <leader>w :set wrap!<cr>
 " Wrap lines at convenient points
 set linebreak
 
-noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
-noremap <Leader>F :FufFile<CR>
-noremap <Leader>v :FufCoverageFile<CR>
-noremap <Leader>b :FufBuffer<CR>
-noremap <Leader>c :FufDirWithFullCwd<CR>
-noremap <F1> :FufHelp<CR>
+
+"nothing using these for the moment
+"noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
+"noremap <Leader>F :FufFile<CR>
+"noremap <Leader>v :FufCoverageFile<CR>
+"noremap <Leader>b :FufBuffer<CR>
+"noremap <Leader>c :FufDirWithFullCwd<CR>
+"noremap <F1> :FufHelp<CR>
 
 " Movement between windows with ^hjkl
 nmap <C-h> <C-w>h
@@ -284,9 +286,19 @@ map <F3> :call EyamlEncrypt() <CR>
 
 " wrap git commit message body to 72 characters
 au FileType gitcommit set tw=72
-
 " F9 for python quick run
-autocmd FileType python nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
-
+au FileType python nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
 " quick fix for YCM - set filetype for .py files (needs investigation)
-autocmd BufNewFile,BufRead *.py   set filetype=python
+au BufNewFile,BufRead *.py   set filetype=python
+" python specific indentation
+au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+" curorline toggle
+nnoremap <Leader>c :set cursorline!<CR>
+
+" enable mouse support
+nnoremap <Leader>m :set mouse=a<CR>
+
+" vim-terraform related settings
+let g:terraform_align=1
+let g:terraform_remap_spacebar=1
