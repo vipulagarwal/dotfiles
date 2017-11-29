@@ -1,3 +1,10 @@
 *.swp
 dotvim/bundle/YouCompleteMe
 dotvim/bundle/vim-nerdtree-tabs
+dotvim/bundle/ale
+dotvim/bundle/nerdcommenter
+dotvim/bundle/nerdtree
+dotvim/bundle/vim-airline
+dotvim/bundle/vim-airline-themes
+dotvim/bundle/vim-fugitive
+dotvim/bundle/vim-terraform
