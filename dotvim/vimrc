@@ -75,7 +75,7 @@ nmap <C-s> :w<CR>
 nnoremap <leader>t :Tabularize /=><CR>
 
 " Nerdtree
-nnoremap <leader>d :NERDTreeToggle<cr>
+nnoremap <leader>d :NERDTreeTabsToggle<cr>
 
 " re-indent entire file and return to where you was
 nmap <C-i> msgg=G`s
@@ -155,12 +155,14 @@ nnoremap <leader>w :set wrap!<cr>
 " Wrap lines at convenient points
 set linebreak
 
-noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
-noremap <Leader>F :FufFile<CR>
-noremap <Leader>v :FufCoverageFile<CR>
-noremap <Leader>b :FufBuffer<CR>
-noremap <Leader>c :FufDirWithFullCwd<CR>
-noremap <F1> :FufHelp<CR>
+
+"nothing using these for the moment
+"noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
+"noremap <Leader>F :FufFile<CR>
+"noremap <Leader>v :FufCoverageFile<CR>
+"noremap <Leader>b :FufBuffer<CR>
+"noremap <Leader>c :FufDirWithFullCwd<CR>
+"noremap <F1> :FufHelp<CR>
 
 " Movement between windows with ^hjkl
 nmap <C-h> <C-w>h
@@ -231,28 +233,8 @@ if has('gui_running')
   colorscheme solarized
 else
   set background=dark
-  colorscheme inkpot 
+  colorscheme inkpot
 endif
-
-" I have to check this later
-" I want syntastic to ignore the 'inherits module::params" shit
-"let g:syntastic_puppet_puppetlint_args = '--no_class_inherits_from_params_class-check --no-class_parameter_defaults-check'
-
-" Let syntastic use Puppet future parser
-"let g:syntastic_puppet_puppet_args = "--parser future"
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_perl_checker = 1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_exit_checks=1
-
-" Some settings of syntastic I'd like to remember but won't use for now.
-"set statusline+=%{SyntasticStatuslineFlag()}
-"let g:syntastic_puppet_puppetlint_quiet_messages = { "level" : "warnings" }
-"let g:syntastic_debug=1
 
 " thanks Peteris Krumins: http://www.catonmat.net/blog/sudo-vim/
 cnoremap sudow w !sudo tee % >/dev/null
@@ -261,32 +243,43 @@ cnoremap sudow w !sudo tee % >/dev/null
 noremap <Leader>8 :set colorcolumn=81<CR>
 noremap <Leader>0 :set colorcolumn=0<CR>
 
+"" eyaml helper
+"function EyamlEncrypt()
+  "" Yank current or last selection to register x
+  "normal! gv"xy
 
-" eyaml helper
-function EyamlEncrypt()
-  " Yank current or last selection to register x
-  normal! gv"xy
+  ""put the content of register x through the eyaml binary and do some magic voodoo to it reg x
+  "let shellcmd = 'eyaml encrypt --stdin 2>&1 | grep -v "\[hiera" | grep "^string"  | cut -c9-'
+  "let output=system(shellcmd, @x)
 
-  "put the content of register x through the eyaml binary and do some magic voodoo to it reg x
-  let shellcmd = 'eyaml encrypt --stdin 2>&1 | grep -v "\[hiera" | grep "^string"  | cut -c9-'
-  let output=system(shellcmd, @x)
+  "" strip newlines from output and put in register x
+  "let @x = substitute(output, '[\r\n]*$', '', '')
 
-  " strip newlines from output and put in register x
-  let @x = substitute(output, '[\r\n]*$', '', '')
+  ""re-select area and paste register x
+  "normal! gv"xp
 
-  "re-select area and paste register x
-  normal! gv"xp
-
-endfunction
-" Usage: select what you want to be replaced by encrypted stuff and then press
-" F3
-map <F3> :call EyamlEncrypt() <CR>
+"endfunction
+"" Usage: select what you want to be replaced by encrypted stuff and then press
+"" F3
+"map <F3> :call EyamlEncrypt() <CR>
 
 " wrap git commit message body to 72 characters
 au FileType gitcommit set tw=72
-
 " F9 for python quick run
-autocmd FileType python nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
-
+au FileType python nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
 " quick fix for YCM - set filetype for .py files (needs investigation)
-autocmd BufNewFile,BufRead *.py   set filetype=python
+au BufNewFile,BufRead *.py   set filetype=python
+" python specific indentation
+au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+" coreos ignition syntax highlight
+au BufNewFile,BufRead *.tmpl   set filetype=systemd
+
+" curorline toggle
+nnoremap <Leader>c :set cursorline!<CR>
+
+" enable mouse support
+nnoremap <Leader>m :set mouse=a<CR>
+
+" vim-terraform related settings
+let g:terraform_align=1
+let g:terraform_remap_spacebar=1

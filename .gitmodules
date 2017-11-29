@@ -31,3 +31,9 @@
 [submodule "dottmux/plugins/tpm"]
 	path = dottmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "dotvim/bundle/vim-nerdtree-tabs"]
+	path = dotvim/bundle/vim-nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "dotvim/bundle/vim-dispatch"]
+	path = dotvim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
