@@ -1,3 +1,4 @@
 *.swp
 dotvim/bundle/YouCompleteMe
 dotvim/bundle/vim-nerdtree-tabs
+dotvim/bundle/ctrlp.vim

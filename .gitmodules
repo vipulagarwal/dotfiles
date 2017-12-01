@@ -46,3 +46,6 @@
 [submodule "dotvim/bundle/command-t"]
 	path = dotvim/bundle/command-t
 	url = https://github.com/wincent/command-t.git
+[submodule "dotvim/bundle/ctrlp.vim"]
+	path = dotvim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
