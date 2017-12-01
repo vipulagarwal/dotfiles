@@ -37,3 +37,12 @@
 [submodule "dotvim/bundle/vim-dispatch"]
 	path = dotvim/bundle/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "dotvim/bundle/vim-polyglot"]
+	path = dotvim/bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "dotvim/bundle/vim-terraform"]
+	path = dotvim/bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
+[submodule "dotvim/bundle/command-t"]
+	path = dotvim/bundle/command-t
+	url = https://github.com/wincent/command-t.git
