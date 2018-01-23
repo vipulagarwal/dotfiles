@@ -8,17 +8,7 @@
   broadcast_all = None
   broadcast_group = None
   broadcast_off = None
-  go_down = <Alt>j
-  go_left = <Alt>h
-  go_right = <Alt>l
-  go_up = <Alt>k
   layout_launcher = None
-  next_tab = <Primary><Shift>k
-  prev_tab = <Primary><Shift>j
-  resize_down = <Alt><Super>j
-  resize_left = <Alt><Super>h
-  resize_right = <Alt><Super>l
-  resize_up = <Alt><Super>k
 [layouts]
   [[default]]
     [[[child1]]]
