@@ -52,3 +52,6 @@
 [submodule "vim-colors-solarized"]
 	path = dotvim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "dotvim/bundle/dracula-theme"]
+	path = dotvim/bundle/dracula-theme
+	url = git@github.com:dracula/vim.git
