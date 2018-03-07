@@ -75,10 +75,11 @@ nmap <C-s> :w<CR>
 nnoremap <leader>t :Tabularize /=><CR>
 
 " Nerdtree
-nnoremap <leader>d :NERDTreeTabsToggle<cr>
+nnoremap <leader>d ::NERDTreeTabsToggle<cr>
+nnoremap <leader>a :ALEToggle<cr>
 
 " re-indent entire file and return to where you was
-nmap <C-i> msgg=G`s
+"nmap <C-i> msgg=G`s
 
 set shiftwidth=2
 set tabstop=2
@@ -203,14 +204,14 @@ let g:airline_enable_branch     = 1
 let g:airline_enable_syntastic  = 1
 let g:airline_powerline_fonts   = 1
 let g:airline_theme             = 'dark'
+let g:airline#extensions#tabline#enabled = 1
 
 noremap <Leader>rg  :color relaxedgreen<CR>
 noremap <Leader>ip  :color inkpot<CR>
 noremap <Leader>ir  :color ir_black<CR>
 noremap <Leader>lu  :color lucius<CR>
 noremap <Leader>mo  :color molokai<CR>
-noremap <Leader>sol :set background=light<CR> <Bar>:colorscheme solarized<CR>
-noremap <Leader>sod :set background=dark<CR> <Bar>:colorscheme solarized<CR>
+noremap <Leader>da  :color dracula<CR>
 
 source ~/.vim_abbreviations
 
