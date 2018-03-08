@@ -265,6 +265,7 @@ nnoremap <Leader>m :set mouse=a<CR>
 
 " vim-terraform related settings
 let g:terraform_align=1
+let g:terraform_fold_sections=1
 let g:terraform_remap_spacebar=1
 
 " close file

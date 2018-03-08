@@ -27,4 +27,7 @@ $ rm -rf .git/modules/a/submodule
 $ git rm -f a/submodule
 ```
 
+### ToDO
+* Automate installation of ctags and tflint
+
 [1] https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule

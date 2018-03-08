@@ -55,3 +55,6 @@
 [submodule "dotvim/bundle/dracula-theme"]
 	path = dotvim/bundle/dracula-theme
 	url = git@github.com:dracula/vim.git
+[submodule "dotvim/bundle/tagbar"]
+	path = dotvim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
