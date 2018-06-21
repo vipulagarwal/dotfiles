@@ -273,3 +273,6 @@ nnoremap <leader>q :q!<cr>
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" NERDCommenter
+let g:NERDDefaultAlign = 'left'

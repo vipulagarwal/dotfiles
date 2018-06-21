@@ -2,3 +2,6 @@
 dotvim/bundle/YouCompleteMe
 dotvim/bundle/vim-nerdtree-tabs
 dotvim/bundle/ctrlp.vim
+dottmux/plugins/tmux-battery
+dottmux/plugins/tmux-cpu
+dottmux/plugins/tmux-resurrect
