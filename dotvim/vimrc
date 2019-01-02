@@ -53,7 +53,7 @@ set showcmd
 " I prefer numbers
 set number
 " Ctrl+n to toggle linenumbers
-nnoremap <C-n> :NumbersToggle<CR>
+nnoremap <silent> <C-n> :set relativenumber!<cr>
 
 " to avoid octal numbering system we remove that:
 " (this is to make ctrl+a and ctrl+x work like i expect)
