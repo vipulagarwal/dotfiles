@@ -1,30 +1,15 @@
 [submodule "dotvim/bundle/vim-airline"]
 	path = dotvim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule "dotvim/bundle/vim-endwise"]
-	path = dotvim/bundle/vim-endwise
-	url = https://github.com/tpope/vim-endwise.git
-[submodule "dotvim/bundle/vim-fugitive"]
-	path = dotvim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
 [submodule "dotvim/bundle/vim-airline-themes"]
 	path = dotvim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "dotvim/bundle/nerdcommenter"]
 	path = dotvim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "dotvim/bundle/ansible-vim"]
-	path = dotvim/bundle/ansible-vim
-	url = https://github.com/pearofducks/ansible-vim
-[submodule "dotvim/bundle/ale"]
-	path = dotvim/bundle/ale
-	url = https://github.com/w0rp/ale.git
 [submodule "dotvim/bundle/nerdtree"]
 	path = dotvim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "dotvim/bundle/tabular"]
-	path = dotvim/bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule "dottmux/plugins/tmux-sensible"]
 	path = dottmux/plugins/tmux-sensible
 	url = https://github.com/tmux-plugins/tmux-sensible
