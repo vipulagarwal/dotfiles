@@ -43,3 +43,6 @@
 [submodule "dotvim/bundle/vim-numbertoggle"]
 	path = dotvim/bundle/vim-numbertoggle
 	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
+[submodule "dotvim/bundle/dracula"]
+	path = dotvim/bundle/dracula
+	url = git@github.com:dracula/vim.git
