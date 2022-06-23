@@ -46,3 +46,6 @@
 [submodule "dotvim/bundle/dracula"]
 	path = dotvim/bundle/dracula
 	url = git@github.com:dracula/vim.git
+[submodule "dotvim/bundle/YouCompleteMe"]
+	path = dotvim/bundle/YouCompleteMe
+	url = git@github.com:ycm-core/YouCompleteMe.git
