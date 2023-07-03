@@ -22,9 +22,9 @@ $ git submodule update --remote # pull changes from upstream
 ### Remove a submodule
 This will come in handy at times[1]
 ```
-$ git submodule deinit -f -- a/submodule
-$ rm -rf .git/modules/a/submodule
-$ git rm -f a/submodule
+$ git submodule deinit -f -- /path/to/submodule
+$ rm -rf .git/modules/path/to/submodule
+$ git rm -f /path/to/submodule
 ```
 
 ### ToDO

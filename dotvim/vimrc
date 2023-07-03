@@ -276,5 +276,3 @@ nmap <F8> :TagbarToggle<CR>
 
 " NERDCommenter
 let g:NERDDefaultAlign = 'left'
-
-" fix del

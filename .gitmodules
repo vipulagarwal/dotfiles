@@ -43,9 +43,3 @@
 [submodule "dotvim/bundle/vim-numbertoggle"]
 	path = dotvim/bundle/vim-numbertoggle
 	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
-[submodule "dotvim/bundle/dracula"]
-	path = dotvim/bundle/dracula
-	url = git@github.com:dracula/vim.git
-[submodule "dotvim/bundle/YouCompleteMe"]
-	path = dotvim/bundle/YouCompleteMe
-	url = git@github.com:ycm-core/YouCompleteMe.git
