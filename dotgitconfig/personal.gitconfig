@@ -1,0 +1,8 @@
+[user]
+	name = Vipul Agarwal
+	email = <EMAIL>
+
+[gitsign]
+	connectorID = https://github.com/login/oauth
+	autoclose = true
+	autocloseTimeout = 1

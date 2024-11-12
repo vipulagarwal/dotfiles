@@ -5,3 +5,5 @@ dotvim/bundle/ctrlp.vim
 dottmux/plugins/tmux-battery
 dottmux/plugins/tmux-cpu
 dottmux/plugins/tmux-resurrect
+dotvim/undodir
+dotgitconfig/work.gitconfig

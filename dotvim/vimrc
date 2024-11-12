@@ -79,7 +79,7 @@ nnoremap <leader>d ::NERDTreeTabsToggle<cr>
 nnoremap <leader>a :ALEToggle<cr>
 
 " re-indent entire file and return to where you was
-"nmap <C-i> msgg=G`s
+nmap <C-i> msgg=G`s
 
 set shiftwidth=2
 set tabstop=2
@@ -115,15 +115,15 @@ set laststatus=2
 
 " history and undo
 "set history=100000
-"if has('persistent_undo')
-"  set undofile
-"  set undoreload=10000
-"  set undolevels=10000
-"  " The // after the undodir tells Vim to name the undo file using the fqfn to
-"  " avoid filenamecollisions.
-"  silent !mkdir ~/.vim/undodir > /dev/null 2>&1
-"  set undodir=~/.vim/undodir//
-"endif
+if has('persistent_undo')
+  set undofile
+  set undoreload=10000
+  set undolevels=10000
+  " The // after the undodir tells Vim to name the undo file using the fqfn to
+  " avoid filenamecollisions.
+  silent !mkdir ~/.vim/undodir > /dev/null 2>&1
+  set undodir=~/.vim/undodir//
+endif
 
 " highlight nutteloze spaties
 "highlight ExtraWhitespace ctermbg=red guibg=red
@@ -240,6 +240,7 @@ endif
 " thanks Peteris Krumins: http://www.catonmat.net/blog/sudo-vim/
 cnoremap sudow w !sudo tee % >/dev/null
 
+
 " Show a column at char 81
 noremap <Leader>8 :set colorcolumn=81<CR>
 noremap <Leader>0 :set colorcolumn=0<CR>
@@ -265,7 +266,7 @@ nnoremap <Leader>m :set mouse=a<CR>
 
 " vim-terraform related settings
 let g:terraform_align=1
-let g:terraform_fold_sections=1
+let g:terraform_fold_sections=0
 let g:terraform_remap_spacebar=1
 
 " close file
@@ -276,3 +277,11 @@ nmap <F8> :TagbarToggle<CR>
 
 " NERDCommenter
 let g:NERDDefaultAlign = 'left'
+
+" tmux breaks paste indentation fix
+if &term =~ "screen"
+    let &t_BE = "\e[?2004h"
+    let &t_BD = "\e[?2004l"
+    exec "set t_PS=\e[200~"
+    exec "set t_PE=\e[201~"
+endif
