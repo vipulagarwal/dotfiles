@@ -1,0 +1,36 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
+[alias]
+	commit = commit -s
+	oldest-ancestor = !zsh -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-main}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
+[tag]
+	gpgsign = false
+[commit]
+	gpgsign = false
+[gpg "x509"]
+	program = gitsign
+[gpg]
+	format = x509
+[includeIf "gitdir:~/workspace/"]
+    path = ~/dotfiles/dotgitconfig/personal.gitconfig
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+
+[merge]
+    conflictstyle = zdiff3
