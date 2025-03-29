@@ -1,14 +1,25 @@
 [global_config]
   borderless = True
   extra_styling = False
+  scroll_tabbar = True
   homogeneous_tabbar = False
   inactive_color_offset = 1.0
-  scroll_tabbar = True
+  clear_select_on_copy = True
 [keybindings]
-  broadcast_all = None
-  broadcast_group = None
+  #copy = <Super>c
+  #paste = <Super>v
   broadcast_off = None
+  broadcast_group = None
+  broadcast_all = None
   layout_launcher = None
+[profiles]
+  [[default]]
+    font = Monospace 11
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -19,12 +30,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    cursor_color = "#ffffff"
-    font = Monospace 11
-    foreground_color = "#ffffff"
-    scrollback_infinite = True
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
